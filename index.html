@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Soińska I. Zakład Zduński | Kominki i Piece Poznań</title>
+
+  <meta
+    name="description"
+    content="Soińska I. Zakład Zduński – kominki, piece i usługi zduńskie w Poznaniu."
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f1eb;
+      color: #29221d;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAV */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 18px 7%;
+
+      background: rgba(35, 27, 22, 0.95);
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid #49372c;
+    }
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: 950;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #d39a55;
+    }
+
+    .nav-call {
+      background: #d39a55;
+      color: #211812;
+
+      padding: 10px 18px;
+      border-radius: 7px;
+
+      font-weight: 900;
+
+      transition: 0.2s;
+    }
+
+    .nav-call:hover {
+      background: #edbc7b;
+      transform: translateY(-2px);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      padding: 140px 7% 90px;
+
+      position: relative;
+      overflow: hidden;
+
+      color: white;
+
+      background:
+        radial-gradient(
+          circle at 80% 35%,
+          rgba(211, 154, 85, 0.22),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          #211812,
+          #4a3021
+        );
+    }
+
+    .hero-content {
+      max-width: 850px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-block;
+
+      color: #e1ad6d;
+
+      border: 1px solid #c88c4b;
+
+      padding: 7px 15px;
+
+      border-radius: 30px;
+
+      font-size: 13px;
+      font-weight: 900;
+
+      margin-bottom: 20px;
+
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: clamp(45px, 7vw, 82px);
+
+      line-height: 0.95;
+
+      margin-bottom: 28px;
+
+      font-weight: 950;
+
+      text-transform: uppercase;
+    }
+
+    h1 span {
+      color: #d39a55;
+    }
+
+    .hero p {
+      color: #d8ccc0;
+
+      font-size: 19px;
+
+      max-width: 690px;
+
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+
+      gap: 14px;
+
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+
+      padding: 15px 25px;
+
+      border-radius: 7px;
+
+      font-weight: 900;
+
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #d39a55;
+      color: #211812;
+
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary:hover {
+      background: #edbc7b;
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+
+      color: white;
+
+      border: 1px solid #80634d;
+    }
+
+    .btn-secondary:hover {
+      border-color: #d39a55;
+      transform: translateY(-3px);
+    }
+
+    /* FIRE DECORATION */
+
+    .fire {
+      position: absolute;
+
+      right: -100px;
+      bottom: -160px;
+
+      width: 500px;
+      height: 500px;
+
+      border: 70px solid #d39a55;
+
+      border-radius: 50%;
+
+      opacity: 0.055;
+    }
+
+    .fire::after {
+      content: "";
+
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      width: 180px;
+      height: 230px;
+
+      transform: translate(-50%, -40%);
+
+      border: 35px solid #fff;
+
+      border-radius: 50% 50% 45% 45%;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 90px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+
+      margin-bottom: 50px;
+    }
+
+    .section-title small {
+      color: #a66e35;
+
+      font-weight: 900;
+
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+
+      margin-top: 8px;
+    }
+
+    .section-title p {
+      color: #746b63;
+
+      margin-top: 10px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: #29211b;
+      color: white;
+    }
+
+    .services .section-title p {
+      color: #aaa097;
+    }
+
+    .service-grid {
+      max-width: 1100px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .service {
+      background: #352a22;
+
+      border: 1px solid #4d3b2e;
+
+      border-radius: 14px;
+
+      padding: 30px;
+
+      transition: 0.25s;
+    }
+
+    .service:hover {
+      transform: translateY(-6px);
+
+      border-color: #d39a55;
+    }
+
+    .service-icon {
+      font-size: 36px;
+
+      margin-bottom: 15px;
+    }
+
+    .service h3 {
+      margin-bottom: 8px;
+    }
+
+    .service p {
+      color: #b8aca1;
+
+      font-size: 15px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      max-width: 1100px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 22px;
+    }
+
+    .about-box {
+      background: #fffaf3;
+
+      border: 1px solid #ded2c4;
+
+      border-radius: 15px;
+
+      padding: 34px;
+    }
+
+    .about-box h3 {
+      font-size: 27px;
+
+      margin-bottom: 12px;
+    }
+
+    .about-box p {
+      color: #6f665e;
+    }
+
+    /* PROCESS */
+
+    .process {
+      max-width: 1050px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .process-box {
+      background: white;
+
+      border: 1px solid #e0d7ce;
+
+      border-radius: 14px;
+
+      padding: 30px;
+
+      text-align: center;
+    }
+
+    .number {
+      width: 55px;
+      height: 55px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin: 0 auto 18px;
+
+      background: #a66e35;
+      color: white;
+
+      border-radius: 50%;
+
+      font-size: 22px;
+      font-weight: 950;
+    }
+
+    .process-box p {
+      color: #756c64;
+
+      margin-top: 8px;
+
+      font-size: 15px;
+    }
+
+    /* FEATURES */
+
+    .features {
+      max-width: 1100px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 18px;
+    }
+
+    .feature {
+      background: white;
+
+      border: 1px solid #e0d7ce;
+
+      border-radius: 14px;
+
+      padding: 28px 15px;
+
+      text-align: center;
+    }
+
+    .feature strong {
+      display: block;
+
+      font-size: 19px;
+
+      margin-bottom: 7px;
+    }
+
+    .feature p {
+      color: #756c64;
+
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+
+      background: #a66e35;
+      color: white;
+    }
+
+    .contact h2 {
+      font-size: 45px;
+
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      margin-bottom: 20px;
+
+      opacity: 0.9;
+    }
+
+    .phone {
+      display: block;
+
+      font-size: clamp(30px, 5vw, 55px);
+
+      font-weight: 950;
+
+      margin-bottom: 25px;
+    }
+
+    .contact-button {
+      display: inline-block;
+
+      background: #29211b;
+      color: white;
+
+      padding: 15px 25px;
+
+      border-radius: 7px;
+
+      font-weight: 900;
+
+      transition: 0.2s;
+    }
+
+    .contact-button:hover {
+      transform: translateY(-3px);
+
+      background: #1b1511;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 35px 7%;
+
+      text-align: center;
+
+      background: #18120e;
+
+      color: #776c63;
+
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 15px 5%;
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+
+      .nav-call {
+        padding: 8px 12px;
+
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 120px 6% 70px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 70px 6%;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 34px;
+      }
+
+      .contact h2 {
+        font-size: 34px;
+      }
+
+      .fire {
+        width: 350px;
+        height: 350px;
+
+        border-width: 50px;
+
+        right: -170px;
+        bottom: -100px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <div class="logo">
+      SOIŃSKA <span>ZAKŁAD ZDUŃSKI</span>
+    </div>
+
+    <a
+      class="nav-call"
+      href="tel:+48618250511"
+    >
+      📞 ZADZWOŃ
+    </a>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="badge">
+        🔥 Zakład zduński
+      </div>
+
+      <h1>
+        Ciepło,
+        <br>
+        <span>które zostaje.</span>
+      </h1>
+
+      <p>
+        Tradycyjne rzemiosło zduńskie i rozwiązania
+        związane z kominkami oraz piecami.
+        Skontaktuj się, aby omówić swój projekt.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="btn btn-primary"
+          href="tel:+48618250511"
+        >
+          📞 ZADZWOŃ
+        </a>
+
+        <a
+          class="btn btn-secondary"
+          href="#oferta"
+        >
+          🔥 ZOBACZ OFERTĘ
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="fire"></div>
+
+  </header>
+
+
+  <!-- SERVICES -->
+
+  <section
+    class="services"
+    id="oferta"
+  >
+
+    <div class="section-title">
+
+      <small>Oferta</small>
+
+      <h2>Kominki, piece i usługi zduńskie</h2>
+
+      <p>
+        Zakres realizacji ustalany indywidualnie z klientem.
+      </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+      <div class="service">
+
+        <div class="service-icon">
+          🔥
+        </div>
+
+        <h3>Kominki</h3>
+
+        <p>
+          Rozwiązania kominkowe dopasowane
+          do charakteru wnętrza.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">
+          🧱
+        </div>
+
+        <h3>Piece</h3>
+
+        <p>
+          Tradycyjne rozwiązania zduńskie
+          związane z budową pieców.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">
+          🏠
+        </div>
+
+        <h3>Rozwiązania do wnętrz</h3>
+
+        <p>
+          Projekty dopasowane do charakteru
+          i potrzeb pomieszczenia.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">
+          🔨
+        </div>
+
+        <h3>Rzemiosło zduńskie</h3>
+
+        <p>
+          Tradycyjne podejście do prac
+          związanych ze zduństwem.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">
+          📐
+        </div>
+
+        <h3>Indywidualne realizacje</h3>
+
+        <p>
+          Zakres i wygląd realizacji ustalany
+          zgodnie z potrzebami klienta.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">
+          📞
+        </div>
+
+        <h3>Konsultacja</h3>
+
+        <p>
+          Skontaktuj się telefonicznie i opowiedz
+          o planowanej realizacji.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section>
+
+    <div class="section-title">
+
+      <small>Rzemiosło</small>
+
+      <h2>Ciepło i charakter wnętrza</h2>
+
+      <p>
+        Kominek lub piec może być ważnym elementem domu.
+      </p>
+
+    </div>
+
+
+    <div class="about">
+
+      <div class="about-box">
+
+        <h3>🔥 Kominek w Twoim domu</h3>
+
+        <p>
+          Odpowiednio zaprojektowany kominek może
+          połączyć funkcję użytkową z wyglądem,
+          który dobrze współgra z wnętrzem.
+        </p>
+
+      </div>
+
+
+      <div class="about-box">
+
+        <h3>🧱 Tradycyjne rzemiosło</h3>
+
+        <p>
+          Zduństwo to rzemiosło o długiej tradycji.
+          Każdą realizację warto rozpocząć od rozmowy
+          i dokładnego określenia potrzeb.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROCESS -->
+
+  <section>
+
+    <div class="section-title">
+
+      <small>Jak zacząć?</small>
+
+      <h2>Od pomysłu do realizacji</h2>
+
+    </div>
+
+
+    <div class="process">
+
+      <div class="process-box">
+
+        <div class="number">
+          1
+        </div>
+
+        <h3>Kontakt</h3>
+
+        <p>
+          Opowiedz o swoim pomyśle
+          i potrzebach.
+        </p>
+
+      </div>
+
+
+      <div class="process-box">
+
+        <div class="number">
+          2
+        </div>
+
+        <h3>Ustalenia</h3>
+
+        <p>
+          Omówienie zakresu i szczegółów
+          planowanej realizacji.
+        </p>
+
+      </div>
+
+
+      <div class="process-box">
+
+        <div class="number">
+          3
+        </div>
+
+        <h3>Realizacja</h3>
+
+        <p>
+          Po ustaleniu szczegółów można
+          rozpocząć realizację.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURES -->
+
+  <section>
+
+    <div class="section-title">
+
+      <small>Soińska I. Zakład Zduński</small>
+
+      <h2>Najważniejsze informacje</h2>
+
+    </div>
+
+
+    <div class="features">
+
+      <div class="feature">
+
+        <strong>🔥 Kominki</strong>
+
+        <p>
+          Rozwiązania kominkowe.
+        </p>
+
+      </div>
+
+
+      <div class="feature">
+
+        <strong>🧱 Piece</strong>
+
+        <p>
+          Usługi zduńskie.
+        </p>
+
+      </div>
+
+
+      <div class="feature">
+
+        <strong>📍 Poznań</strong>
+
+        <p>
+          Rataja 62
+        </p>
+
+      </div>
+
+
+      <div class="feature">
+
+        <strong>📞 Kontakt</strong>
+
+        <p>
+          61 825 05 11
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact">
+
+    <h2>
+      Planujesz kominek lub piec?
+    </h2>
+
+    <p>
+      Skontaktuj się i omów swoją realizację.
+    </p>
+
+    <a
+      class="phone"
+      href="tel:+48618250511"
+    >
+      61 825 05 11
+    </a>
+
+    <a
+      class="contact-button"
+      href="tel:+48618250511"
+    >
+      📞 ZADZWOŃ TERAZ
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <strong>
+      Soińska I. Zakład Zduński
+    </strong>
+
+    <br>
+
+    Rataja 62, Poznań
+
+    <br><br>
+
+    © 2026 — Demo strony internetowej
+
+  </footer>
+
+</body>
+</html>
